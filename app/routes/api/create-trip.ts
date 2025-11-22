@@ -345,6 +345,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
             }
         );
 
+
+
         return data({ id: result.$id });
     } catch (err) {
         console.error("❌ Error generating travel plan:", err);
