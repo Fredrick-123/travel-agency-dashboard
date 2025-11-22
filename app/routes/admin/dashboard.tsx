@@ -1,12 +1,28 @@
 import React from 'react'
-// import Header from "../../../components/Header";
 import {Header ,StatsCard, TripCard} from "../../../components";
 import {dashboardStats , user , allTrips} from '../../../constants';
+import {getUser} from "~/appwrite/auth";
+import type { Route } from './+types/dashboard';
 
-const Dashboard = () => {
+
+// export async function clientLoader() {
+//        return await getUser()
+// }
 
 
-    const { totalUsers , usersJoined, totalTrips , tripsCreated  } = dashboardStats;
+export const clientLoader = async () => await getUser();
+const { totalUsers , usersJoined, totalTrips , tripsCreated  } = dashboardStats;
+
+// export async function loader() {
+//     throw new Error("My first Sentry error!");
+// }
+
+
+const Dashboard = ({ loaderData }: Route.ComponentProps) => {
+
+    const user = loaderData as User | null;
+
+    // const { totalUsers , usersJoined, totalTrips , tripsCreated  } = dashboardStats;
 
     return (
         <main className="dashboard wrapper">

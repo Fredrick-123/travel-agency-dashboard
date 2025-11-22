@@ -15,6 +15,7 @@ declare type User = BaseUser;
 
 declare interface Country {
     name: string;
+    flag: string;
     coordinates: [number, number];
     value: string;
     openStreetMap?: string;
@@ -115,6 +116,7 @@ declare interface DashboardStats {
 
 declare interface CreateTripResponse {
     id?: string;
+    error?: string;
 }
 
 declare interface DestinationProps {
