@@ -27,7 +27,7 @@ export const loader = async ({ params }: LoaderFunctionArgs) => {
 const TravelDetail = ({ loaderData }: Route.ComponentProps) => {
     const imageUrls = loaderData?.trip?.imageUrls || [];
     const tripData = parseTripData(loaderData?.trip?.tripDetail);
-    const paymentLink = loaderData?.trip?.payment_link;
+    // const paymentLink = loaderData?.trip?.payment_link;
 
     const {
         name, duration, itinerary, travelStyle,
@@ -171,7 +171,7 @@ const TravelDetail = ({ loaderData }: Route.ComponentProps) => {
                         </section>
                     ))}
 
-                    <a href={paymentLink} className="flex">
+                    <a href={"#"} className="flex">
                         <ButtonComponent className="button-class" type="submit">
                         <span className="p-16-semibold text-white">
                             Pay to join the trip
