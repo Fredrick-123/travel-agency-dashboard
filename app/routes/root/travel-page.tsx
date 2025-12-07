@@ -82,7 +82,7 @@ const TravelPage = ({ loaderData }: Route.ComponentProps) => {
                             </p>
                         </article>
 
-                        <Link to="http://localhost:5173/dashboard">
+                        <Link to="/dashboard">
                             <ButtonComponent type="button" className="button-class !h-11 !w-full md:!w-[240px]">
                                 <span className="p-16-semibold text-white">
                                     Get Started
